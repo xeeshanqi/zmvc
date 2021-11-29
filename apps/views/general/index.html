@@ -1,0 +1,41 @@
+{% extends apps/views/layouts/layout.html %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div class="header-container">
+    <header class="wrapper clearfix">
+        <h1 class="title">Welcome</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div class="main-container">
+    <div class="main wrapper clearfix">
+
+        <article>
+            <header>
+                <h1>Hi</h1>
+                <p>Welcome to Zeeshan MVC</p>
+            </header>
+        
+        </article>
+
+        <aside>
+            <h3>Who Developed Zeeshan MVC</h3>
+            <p>Zeeshan MVC is developed and Designed by Malik Muhammad Zeeshan.</p>
+        </aside>
+
+        <ul>
+            {% foreach($colors as $color): %}
+            <li>{{ $color }}</li>
+            {% endforeach; %}
+        </ul>
+
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
+{% endblock %}
